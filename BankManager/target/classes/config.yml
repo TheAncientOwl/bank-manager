@@ -1,0 +1,51 @@
+# =========================================== #
+#      BankManager developed by Bufnita       #
+# =========================================== #
+#Permissions : bankmanager.withdraw
+#              bankmanager.deposit
+#              bankmanager.reload
+
+#Banknote's material
+material: "SUNFLOWER"
+
+#Banknote's display name
+displayName: "&e&lMoney"
+
+#Banknote's lores
+#Placeholder : {MONEY} -> must appear in lore! If not specified, a default one will be added
+lore:
+  - "&eValue: &a{MONEY}$"
+  - "&eGame currency"
+  - "&eCan be used to buy items from warp shop"
+
+#Minimum withdraw amount
+minWithdrawAmount: 10.0
+
+#Max money from a player's account
+maxMoney: 100000.0
+
+#This option is used to prevent players to place banknotes (Ex: material: SUNFLOWER || STONE || etc)
+#Effects after enabling or disabling this feature will be seen after a server restart
+#If banknote's material is not a block, I recommend to set this to false
+isBanknoteMaterialBlock: true
+
+# =============================== #
+#      BankManager Messages       #
+# =============================== #
+prefix: "&9&lBank &8&l> "
+notANumber: "&7Not a valid number&8!"
+notEnoughArgs: "&7Not enough args&8!"
+notEnoughArgsWithdraw: "&7&oNot enough args&8! &b&o/withdraw <banknoteValue> <amount>"
+notEnoughArgsDeposit: "&7&oNot enough args&8! &b&o/deposit <amount>"
+notEnoughBanknotesToDeposit: "&7&oYou don't have enough banknotes in hand&8&o!"
+success: "&7Transaction successfully&8!"
+notEnoughMoney: "&7You don't have enough money&8!"
+placeBanknoteDeny: "&7You can't place banknotes&8!"
+notBanknote: "&7This item is not a valid banknote&8!"
+noPermission: "&7You don't have permission to do this&8!"
+accountFull: "&7Your account is already full&8!"
+notMinWithdrawAmount: "&7Minimum withdraw amount is 10.0$&8!"
+
+# ==================================== #
+#      BankManager end of config       #
+# ==================================== #
