@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<project name="maven-antrun-" default="main"  >
-<target name="main">
-  <copy file="C:\Users\valer\Desktop\BankManager\target/BankManager-1.14.4-1.2.jar" todir="C:\Users\valer\Desktop"/>
-</target>
-</project>
