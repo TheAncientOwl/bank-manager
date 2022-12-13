@@ -4,39 +4,45 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.buha007.spigot.bankmanager</groupId>
   <artifactId>BankManager</artifactId>
-  <version>1.14.4-1.2</version>
+  <version>spigot-1.19.2</version>
   <packaging>jar</packaging>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.release>17</maven.compiler.release>
   </properties>
+
   <repositories>
-      <repository>
-          <id>spigot-repo</id>
-          <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-      </repository>
-      <repository>
-	        <id>vault-repo</id>
-	        <url>http://nexus.hc.to/content/repositories/pub_releases</url>
-      </repository>
+    <repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+      
+    <repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+    </repository>
   </repositories>
+
   <dependencies>
-      <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.14.4-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>net.milkbowl.vault</groupId>
-        <artifactId>VaultAPI</artifactId>
-        <version>1.7</version>
-        <scope>provided</scope>
-      </dependency>
+    <dependency>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot-api</artifactId>
+      <version>1.19.2-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.MilkBowl</groupId>
+      <artifactId>VaultAPI</artifactId>
+      <version>1.7</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
+
   <build>
     <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+
     <resources>
       <resource>
         <directory>${project.basedir}/src/main/resources</directory>
@@ -46,25 +52,27 @@
         </includes>
       </resource>
     </resources>
-    <plugins>
-      <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.8</version>
-          <executions>
-            <execution>
-              <phase>install</phase>
-              <configuration>
-               <target>
-                 <copy file="${project.build.directory}/${project.build.finalName}.jar"
-                       todir="C:\Users\valer\Desktop" />
-               </target>
-              </configuration>
-              <goals>
-                <goal>run</goal>
-              </goals>
-            </execution>
-          </executions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.2.0</version>
+          <configuration>
+            <outputDirectory>C:/Users/TheAncientOwl/mc-owls-valley/plugins</outputDirectory>
+          </configuration>
         </plugin>
-    </plugins>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <release>17</release>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>

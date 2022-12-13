@@ -1,8 +1,8 @@
-api: 1.14.3-R0.1-SNAPSHOT
-api-version: "1.14"
+api: 1.19.2-R0.1-SNAPSHOT
+api-version: 1.19
 main: com.buha007.spigot.bankmanager.Main
 name: BankManager
-version: "1.2 for MC 1.14.3"
+version: '1.2 for MC 1.19.2'
 author: Bufnita
 softdepend: [Vault]
 commands:

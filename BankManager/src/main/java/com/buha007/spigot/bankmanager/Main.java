@@ -34,7 +34,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         configuration = new ConfigAccessor(this, "config.yml");
         console = getServer().getConsoleSender();
-        printConsole("&9Bank&3Manager &bfor 1.14.4 developed by Bufnita");
+        printConsole("&9Bank&3Manager &bfor 1.19.2 developed by Bufnita");
 
         if (!setupEconomy()) {
             printConsole("&8[&4ERROR&8] &9Bank&3Manager &8-> &cVault dependency not found! Stopping BankManager!");
